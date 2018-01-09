@@ -4045,7 +4045,8 @@ public class ActivityManagerService extends IActivityManager.Stub
             Slog.i(TAG, buf.toString());
 
             if(hostingType.equals("activity")) {
-                if (mPerf == null) {
+                if (mPerf == null && mContext.getResources().getBoolean
+                                (com.android.internal.R.bool.config_isBoostFrameworkPresent)) {
                     mPerf = new BoostFramework();
                 }
                 if (mPerf != null) {
@@ -4054,7 +4055,8 @@ public class ActivityManagerService extends IActivityManager.Stub
                 }
             }
 
-            if (mPerfServiceStartHint == null) {
+            if (mPerfServiceStartHint == null && mContext.getResources().getBoolean
+                            (com.android.internal.R.bool.config_isBoostFrameworkPresent)) {
                 mPerfServiceStartHint = new BoostFramework();
             }
             if (mPerfServiceStartHint != null) {

@@ -18,4 +18,7 @@
 <resources>
   <!-- Emergency button in power menu -->
   <java-symbol type="bool" name="config_showEmergencyButtonInPowerMenu" />
+
+  <!-- BoostFramework -->
+  <java-symbol type="bool" name="config_isBoostFrameworkPresent" />
 </resources>
