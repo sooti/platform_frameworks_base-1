@@ -2881,8 +2881,7 @@ public final class ViewRootImpl implements ViewParent,
         if (mAttachInfo.mViewScrollChanged) {
             if (mHaveMoveEvent && !mIsPerfLockAcquired) {
                 mIsPerfLockAcquired = true;
-                if (mPerf == null && mContext.getResources().getBoolean
-                                (com.android.internal.R.bool.config_isBoostFrameworkPresent)) {
+                if (mPerf == null) {
                     mPerf = new BoostFramework();
                 }
                 if (mPerf != null) {

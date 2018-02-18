@@ -233,10 +233,7 @@ public abstract class PanelView extends FrameLayout {
         mNotificationsDragEnabled =
                 getResources().getBoolean(R.bool.config_enableNotificationShadeDrag);
 
-        if (mPerf == null && getResources().getBoolean
-                        (com.android.internal.R.bool.config_isBoostFrameworkPresent)) {
-                mPerf = new BoostFramework();
-        }
+        mPerf = new BoostFramework();
         mVibrator = mContext.getSystemService(Vibrator.class);
         mVibrateOnOpening = mContext.getResources().getBoolean(
                 R.bool.config_vibrateOnIconAnimation);

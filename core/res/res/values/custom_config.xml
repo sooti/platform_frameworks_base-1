@@ -20,9 +20,6 @@
     <!-- Whether to show emergency button in power menu -->
     <bool name="config_showEmergencyButtonInPowerMenu">false</bool>
 
-    <!-- Whether boostframework.jar is present or not -->
-    <bool name="config_isBoostFrameworkPresent">false</bool>
-
     <!-- Default value for proximity check on screen wake
          NOTE ! - Enable for devices that have a fast response proximity sensor (ideally < 300ms)
     -->
